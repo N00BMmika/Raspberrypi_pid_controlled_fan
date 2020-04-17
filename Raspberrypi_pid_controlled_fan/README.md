@@ -32,20 +32,25 @@ Capacitor as well as high PWM frequency (200Hz) makes PWM output closer to DAC o
 Design was done with [Eagle](https://www.autodesk.com/products/eagle/free-download). Here are [board](eagle/rpifan.brd) and [schema](eagle/rpifan.sch) files.
 
 Top view of the designed board looks like this.
-![board top view](bitmap/board_top_view.PNG). 
 
-Trick to make the assembly and soldering more easy I cut legs 3,5 and 11 away from the connector. This way traces to pins 4,6,12 is easy to make.
+![board top view](bitmap/board_top_view.PNG).
+
+Trick to make the assembly and soldering easier I cut legs 3,5 and 11 away from the connector. This way traces to pins 4,6,12 is easy to make.
 
 3d visualization exported from Eagle to [Fusion360](https://www.autodesk.com/campaigns/fusion-360-for-hobbyists)
 
 ![3d model](bitmap/board_3d.PNG)
 
-Actual assembly looks almost 1:1 the same :) NOTE: FET is oriented differently in the actual assembly due mistake. Some rework was required solder FET legs properly.
+Actual assembly looks almost 1:1 the same :) 
+
+NOTE: FET is oriented differently in the actual assembly due mistake. Some rework was required solder FET legs properly.
 
 ![assembled](bitmap/assembly.PNG)
 
-Fan control noard inside the Case
+Fan control board inside the Case
+
 ![board assembled](bitmap/board_assembled.PNG)
+
 Case did not close properly since fan on top cover goes lower than the top cover. Luckily the case is parts are put together with magnets. Problem was solved with ~2mm thick round magnets (see yellow arrows).
 
 
