@@ -67,10 +67,10 @@ Controlling the FAN
 
 and for logging (off by default)
 ![Logging](bitmap/flow_logging.PNG)
+
 Logging of CPU temperature, CPU load and fan PWM is for later analysis of the functionality. There is also Node Red Dashboard GUI showing CPU tepmerature, PID output and PID internal paramters. It could help to tune PID parameters.
+
 ![GUI](bitmap/GUI.PNG)
-
-
 
 All flows are [here](flow/flow.json)
 
