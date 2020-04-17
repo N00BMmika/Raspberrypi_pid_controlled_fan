@@ -1,0 +1,1182 @@
+[
+    {
+        "id": "b05dd88.5fdb928",
+        "type": "tab",
+        "label": "RPi control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4e711744.cbc388",
+        "type": "tab",
+        "label": "Fan PID control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f2ba8fa6.5c45c",
+        "type": "tab",
+        "label": "logging",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c8dc1d9c.319ab",
+        "type": "ui_tab",
+        "z": "",
+        "name": "fan control",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "70d845ed.79405c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Fan PID control",
+        "tab": "c8dc1d9c.319ab",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "69e421a4.56677",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c4eaf7bb.e853e8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Col1",
+        "tab": "ed48c945.c297c8",
+        "order": 1,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "1e5b4f67.8d4441",
+        "type": "ui_group",
+        "z": "",
+        "name": "Actions",
+        "tab": "ed48c945.c297c8",
+        "order": 4,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "fe8b4c48.76a84",
+        "type": "ui_group",
+        "z": "",
+        "name": "Col2",
+        "tab": "ed48c945.c297c8",
+        "order": 2,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "b11452a3.d72f6",
+        "type": "ui_group",
+        "z": "",
+        "name": "Col3",
+        "tab": "ed48c945.c297c8",
+        "order": 3,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "ed48c945.c297c8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "RPi Control",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7d92ae1e.8e2cb",
+        "type": "ui_chart",
+        "z": "4e711744.cbc388",
+        "name": "",
+        "group": "70d845ed.79405c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "CPU temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 810,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9694896.9ec318",
+        "type": "ui_text",
+        "z": "4e711744.cbc388",
+        "group": "70d845ed.79405c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PID integral",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 790,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ab49bbd.937a248",
+        "type": "ui_chart",
+        "z": "4e711744.cbc388",
+        "name": "",
+        "group": "70d845ed.79405c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "PID output",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e6614b.70e0aec",
+        "type": "ui_text",
+        "z": "4e711744.cbc388",
+        "group": "70d845ed.79405c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PID output",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 790,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c5e77393.a5372",
+        "type": "function",
+        "z": "4e711744.cbc388",
+        "name": "myPID",
+        "func": "setPoint = 60 // Target temperature\np = 2         // Proportional\ni = 0.5       // Integral\nd = 0.1       // Derivative\nintegral=context.get('integral') || 0 \nlastTemperature = context.get('last') || setPoint\n\ntemperature = msg.payload\nerror = setPoint - temperature\nproportional = p * error\nintegral = integral + i * error\n\n// Limits for integral value\nif (integral<-100){\n    integral=-100\n} \nif (integral > 100){\n    integral = 100\n}\n\ndtemp = temperature - lastTemperature\n\nderivative = d * dtemp\n\ncontext.set('last',temperature)\ncontext.set('integral',integral)\n\noutput = proportional + integral + derivative\n\n// Limits for output value. \n// FAN can only reduce temperature\nif (output<0){\n    output=0\n} else if (output > 100){\n    output = 100\n}\n\nmsg.payload = 100-output\n\nreturn [msg, \n    {\"payload\": integral},\n    {\"payload\": derivative}\n]",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "ab49bbd.937a248",
+                "6e6614b.70e0aec",
+                "350bebec.e02514",
+                "38473f12.7c787"
+            ],
+            [
+                "a9694896.9ec318",
+                "21574ba4.55fff4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "350bebec.e02514",
+        "type": "debug",
+        "z": "4e711744.cbc388",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 790,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "21574ba4.55fff4",
+        "type": "ui_chart",
+        "z": "4e711744.cbc388",
+        "name": "",
+        "group": "70d845ed.79405c",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "PID integral",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2773aa67.368c66",
+        "type": "ui_gauge",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "group": "c4eaf7bb.e853e8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CPU Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 710,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "cb9a8b9b.b137f8",
+        "type": "exec",
+        "z": "b05dd88.5fdb928",
+        "command": "vcgencmd measure_temp",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "RPi Temp.",
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "d0f6e8b6.545838"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "407e8159.ef2f4",
+        "type": "inject",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "cb9a8b9b.b137f8",
+                "ee0188f7.1886b8",
+                "e7fa6d07.830b1"
+            ]
+        ]
+    },
+    {
+        "id": "d0f6e8b6.545838",
+        "type": "function",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "func": "str = msg.payload\nmsg.payload = str.substring(5,9);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 120,
+        "wires": [
+            [
+                "2773aa67.368c66",
+                "8a4e552a.ab40f8",
+                "fcdd43f3.6d827"
+            ]
+        ]
+    },
+    {
+        "id": "8a8c6a34.7e0ae8",
+        "type": "ui_button",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "group": "1e5b4f67.8d4441",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Reboot",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 80,
+        "y": 440,
+        "wires": [
+            [
+                "9247a990.e7c468"
+            ]
+        ]
+    },
+    {
+        "id": "9247a990.e7c468",
+        "type": "exec",
+        "z": "b05dd88.5fdb928",
+        "command": "sudo reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Reboot",
+        "x": 320,
+        "y": 440,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "984e31.a66b51d",
+        "type": "ui_button",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "group": "1e5b4f67.8d4441",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Shutdown",
+        "color": "",
+        "bgcolor": "red",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 80,
+        "y": 520,
+        "wires": [
+            [
+                "1fccd31b.072ecd"
+            ]
+        ]
+    },
+    {
+        "id": "1fccd31b.072ecd",
+        "type": "exec",
+        "z": "b05dd88.5fdb928",
+        "command": "sudo shutdown -h now",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Shutdown",
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8a4e552a.ab40f8",
+        "type": "ui_chart",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "group": "c4eaf7bb.e853e8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": true,
+        "outputs": 1,
+        "x": 670,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee0188f7.1886b8",
+        "type": "exec",
+        "z": "b05dd88.5fdb928",
+        "command": "top -d 0.5 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print $2 + $4}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "CPU Load",
+        "x": 320,
+        "y": 200,
+        "wires": [
+            [
+                "beaae76e.e361c8",
+                "d40b917e.8f81b8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e7fa6d07.830b1",
+        "type": "exec",
+        "z": "b05dd88.5fdb928",
+        "command": "free | grep Mem | awk '{print 100*($4+$6+$7)/$2}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Free Memory",
+        "x": 320,
+        "y": 280,
+        "wires": [
+            [
+                "d0cd0513.6a7ae8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "beaae76e.e361c8",
+        "type": "ui_gauge",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "group": "c4eaf7bb.e853e8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Processor",
+        "label": "CPU",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 690,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d0cd0513.6a7ae8",
+        "type": "ui_gauge",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "group": "fe8b4c48.76a84",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Memory",
+        "label": "RAM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 680,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1987cef0.a6af51",
+        "type": "exec",
+        "z": "b05dd88.5fdb928",
+        "command": "df -h",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Disk Usage",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "4c936c21.fcd844"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "45b0391a.af7c48",
+        "type": "ui_gauge",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "group": "b11452a3.d72f6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Disk",
+        "label": "Usage",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "x": 680,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "4c936c21.fcd844",
+        "type": "function",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "func": "var re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg.payload = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "45b0391a.af7c48"
+            ]
+        ]
+    },
+    {
+        "id": "9dc5b12a.2ffb7",
+        "type": "inject",
+        "z": "b05dd88.5fdb928",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 120,
+        "y": 360,
+        "wires": [
+            [
+                "1987cef0.a6af51"
+            ]
+        ]
+    },
+    {
+        "id": "fcdd43f3.6d827",
+        "type": "link out",
+        "z": "b05dd88.5fdb928",
+        "name": "temperature",
+        "links": [
+            "2a77623f.e4f75e",
+            "d6ce2e78.655c6",
+            "dd82ce44.950d8"
+        ],
+        "x": 735,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "2a77623f.e4f75e",
+        "type": "link in",
+        "z": "4e711744.cbc388",
+        "name": "",
+        "links": [
+            "fcdd43f3.6d827"
+        ],
+        "x": 175,
+        "y": 180,
+        "wires": [
+            [
+                "8fe80007.c592c"
+            ]
+        ]
+    },
+    {
+        "id": "9aea5a98.e535b8",
+        "type": "rpi-gpio out",
+        "z": "4e711744.cbc388",
+        "name": "",
+        "pin": "12",
+        "set": false,
+        "level": "0",
+        "freq": "200",
+        "out": "pwm",
+        "x": 780,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "38473f12.7c787",
+        "type": "function",
+        "z": "4e711744.cbc388",
+        "name": "pid to pwm",
+        "func": "msg.payload = msg.payload / 2\nif (msg.payload < 2){\n    msg.payload = 0\n}\nelse{\n    msg.payload += 50\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "ae794955.9f7a48"
+            ]
+        ]
+    },
+    {
+        "id": "e638a889.450008",
+        "type": "link out",
+        "z": "4e711744.cbc388",
+        "name": "pwm",
+        "links": [
+            "f35eeadf.088d8"
+        ],
+        "x": 735,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8fe80007.c592c",
+        "type": "smooth",
+        "z": "4e711744.cbc388",
+        "name": "max from 5",
+        "property": "payload",
+        "action": "max",
+        "count": "5",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "c5e77393.a5372",
+                "7d92ae1e.8e2cb"
+            ]
+        ]
+    },
+    {
+        "id": "ae794955.9f7a48",
+        "type": "smooth",
+        "z": "4e711744.cbc388",
+        "name": "max from 5",
+        "property": "payload",
+        "action": "max",
+        "count": "5",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "e638a889.450008",
+                "9aea5a98.e535b8",
+                "ca550ec8.46a2b",
+                "8f311274.4697d8"
+            ]
+        ]
+    },
+    {
+        "id": "d40b917e.8f81b8",
+        "type": "link out",
+        "z": "b05dd88.5fdb928",
+        "name": "CPU load",
+        "links": [
+            "590b54e8.72bf64",
+            "e1b83aa7.9395c"
+        ],
+        "x": 735,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b3e2c983.6c13f",
+        "type": "file",
+        "z": "f2ba8fa6.5c45c",
+        "name": "",
+        "filename": "/home/pi/raspilog.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 680,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86c3b70a.97317",
+        "type": "function",
+        "z": "f2ba8fa6.5c45c",
+        "name": "temperature",
+        "func": "d=new Date()\nmsg.payload=d.getTime()+',t,'+msg.payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 60,
+        "wires": [
+            [
+                "9a812dc7.a97f08"
+            ]
+        ]
+    },
+    {
+        "id": "17b09be.d5de9e4",
+        "type": "function",
+        "z": "f2ba8fa6.5c45c",
+        "name": "cpu",
+        "func": "d=new Date()\nmsg.payload=d.getTime()+',c,'+msg.payload.trim()\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 100,
+        "wires": [
+            [
+                "9a812dc7.a97f08"
+            ]
+        ]
+    },
+    {
+        "id": "f35eeadf.088d8",
+        "type": "link in",
+        "z": "f2ba8fa6.5c45c",
+        "name": "",
+        "links": [
+            "e638a889.450008"
+        ],
+        "x": 315,
+        "y": 140,
+        "wires": [
+            [
+                "132a3115.c9a2af"
+            ]
+        ]
+    },
+    {
+        "id": "132a3115.c9a2af",
+        "type": "function",
+        "z": "f2ba8fa6.5c45c",
+        "name": "pwm",
+        "func": "d=new Date()\nmsg.payload=d.getTime()+',p,'+msg.payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "9a812dc7.a97f08"
+            ]
+        ]
+    },
+    {
+        "id": "9192ee4d.80546",
+        "type": "ui_switch",
+        "z": "f2ba8fa6.5c45c",
+        "name": "",
+        "label": "logging",
+        "tooltip": "",
+        "group": "70d845ed.79405c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 240,
+        "y": 240,
+        "wires": [
+            [
+                "144638ea.9efbcf"
+            ]
+        ]
+    },
+    {
+        "id": "144638ea.9efbcf",
+        "type": "function",
+        "z": "f2ba8fa6.5c45c",
+        "name": "store logging state",
+        "func": "flow.set(\"logging\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "9cc37a3a.2bd5c"
+            ]
+        ]
+    },
+    {
+        "id": "2c7c4ea3.d6bc82",
+        "type": "inject",
+        "z": "f2ba8fa6.5c45c",
+        "name": "",
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "9192ee4d.80546"
+            ]
+        ]
+    },
+    {
+        "id": "9a812dc7.a97f08",
+        "type": "switch",
+        "z": "f2ba8fa6.5c45c",
+        "name": "logging?",
+        "property": "logging",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 60,
+        "wires": [
+            [
+                "b3e2c983.6c13f",
+                "9cc37a3a.2bd5c"
+            ]
+        ]
+    },
+    {
+        "id": "9cc37a3a.2bd5c",
+        "type": "debug",
+        "z": "f2ba8fa6.5c45c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 650,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "dd82ce44.950d8",
+        "type": "link in",
+        "z": "f2ba8fa6.5c45c",
+        "name": "",
+        "links": [
+            "fcdd43f3.6d827"
+        ],
+        "x": 315,
+        "y": 60,
+        "wires": [
+            [
+                "86c3b70a.97317"
+            ]
+        ]
+    },
+    {
+        "id": "e1b83aa7.9395c",
+        "type": "link in",
+        "z": "f2ba8fa6.5c45c",
+        "name": "",
+        "links": [
+            "d40b917e.8f81b8"
+        ],
+        "x": 315,
+        "y": 100,
+        "wires": [
+            [
+                "17b09be.d5de9e4"
+            ]
+        ]
+    },
+    {
+        "id": "4d3460ee.d739d8",
+        "type": "comment",
+        "z": "b05dd88.5fdb928",
+        "name": "Raspberry Pi Control Dashboard",
+        "info": "https://flows.nodered.org/flow/25af5334a79d6c02d6413968a8bff572\n\nhttps://gist.github.com/gestadieu/25af5334a79d6c02d6413968a8bff572\n\n",
+        "x": 310,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ca550ec8.46a2b",
+        "type": "ui_chart",
+        "z": "4e711744.cbc388",
+        "name": "",
+        "group": "70d845ed.79405c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "label": "Fan PWM",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f311274.4697d8",
+        "type": "ui_text",
+        "z": "4e711744.cbc388",
+        "group": "70d845ed.79405c",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fan PWM",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 780,
+        "y": 340,
+        "wires": []
+    }
+]
